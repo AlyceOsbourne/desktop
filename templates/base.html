@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link href="{{ url_for('static', filename='css/base.css') }}" rel="stylesheet">
+    {% if page_style %}
+    <link href="{{ url_for('static', filename='css/' + page_style) }}" rel="stylesheet">
+    {% endif %}
+    {% if page_script %}
+    <script src="{{ url_for('static', filename='js/' + page_script) }}"></script>
+    {% endif %}
+    {% block head %}
+    {% endblock %}
+    <title>{{ title }}</title>
+</head>
+<body>
+    {% block content %}
+    {% endblock %}
+</body>
+</html>
