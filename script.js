@@ -155,6 +155,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
         stationSelect.appendChild(optGroup);
     });
+
     
     stationSelect.selectedIndex = 0;
     const audio = document.querySelector("audio");
@@ -162,12 +163,13 @@ document.addEventListener("DOMContentLoaded", function () {
     
     stationSelect.addEventListener("change", (e) => {
         const audio = document.querySelector("audio");
+        const play = !audio.paused;
         audio.src = e.target.value;
-        if (!audio.paused) {
-            audio.play();
-            document.querySelector(".play-pause").classList.remove("fa-play");
-            document.querySelector(".play-pause").classList.add("fa-pause");
-        };
+        window.setTimeout(() => {
+            if (play) {
+                audio.play();
+            }
+        }, 10);
     });
     
     const desktop = document.querySelector(".desktop");
@@ -180,5 +182,12 @@ document.addEventListener("DOMContentLoaded", function () {
             desktop.appendChild(window);
         });
         desktop.querySelector(".grid").appendChild(icon);
+    });
+        
+    const startButton = document.querySelector('.start-button');
+    const menu = document.querySelector('.menu');
+
+    startButton.addEventListener('click', function() {
+        menu.classList.toggle('expanded');
     });
 });

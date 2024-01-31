@@ -51,7 +51,7 @@ body {
         grid-template-columns: 0.1fr 1fr 0.1fr;
         grid-template-rows: 1fr;
         border-top: 1px solid var(--accent-colour);
-
+        height: 4em;
         .start {
             text-align: center;
             color: var(--accent-colour);
@@ -71,6 +71,26 @@ body {
                 cursor: pointer;
                 transition: background-color 0.2s ease-out, color 0.2s ease-in;
             }
+            
+            .menu {
+                width: 0;
+                height: 0;
+                overflow: hidden;
+                background-color: var(--base-colour);
+                border: 1px solid var(--accent-colour);
+                border-bottom: none;
+                position: absolute;
+                bottom: 4.1em;
+                left: -2px;
+                transition: width 0.2s, height 0.2s, bottom 0.1s, left 0.1s;
+            }
+            
+            .menu.expanded {
+                height: 30em;
+                width: 20em;
+                left: 0;
+            }
+
         }
 
         .icon-tray {

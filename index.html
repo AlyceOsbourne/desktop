@@ -15,16 +15,15 @@
             <div class="taskbar">
                 <div class="start">
                     <button class="start-button">Start</button>
-                    <div class="menu" style="display: none;"></div>
+                    <div class="menu"></div>
                 </div>
                 <div class="icon-tray"></div>
                 <div class="system-tray">
                     <div class="radio">
+                        <audio style="display: none;"></audio>
+                        <i class="play_pause fa fa-play" onclick="playPause(this)"></i>
                         <select name="station" id="station">
                         </select>
-                        <audio controls style="display: none;">
-                        </audio>
-                        <i class="play_pause fa fa-play" onclick="playPause(this)"></i>
                         <input type="range" min="0" max="100" value="100" class="volume" onchange="setVolume(this.value)" />
                     </div>
                     <p class="time">12:00</p>
