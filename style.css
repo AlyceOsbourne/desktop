@@ -142,13 +142,12 @@ body {
                 background-color: var(--base-colour);
                 color: var(--accent-colour);
                 border: 1px solid var(--accent-colour);
-                transition: background-color 0.2s ease-out, color 0.2s ease-in, width 0.2s ease-in;
+                transition: background-color 0.2s ease-out, color 0.2s ease-in;
                 &:hover,
                 &:focus {
                     background-color: var(--accent-colour);
                     color: var(--base-colour);
                     font-weight: bold;
-                    width: 18em;
                 }
                 
                 option {
