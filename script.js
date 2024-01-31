@@ -31,16 +31,16 @@ const genres = [
     new Genre("Chiptunes", [
         new Station("CVGM.net - Oldschool Video Game And Demoscene Music", "http://69.195.153.34:80/cvgm192"),
         new Station("Gamesboro Radio", "https://radio.gamesboro.org/listen/gamesboro_radio/radio.mp3"),
-        new Station("HYPERADIO", "http://hyperadio.ru:8000/live2"),
-        new Station("Pixel Vibes", "http://alxq.org:8000/undrgnd")
+        new Station("HYPERADIO", "https://hyperadio.ru:8000/live2"),
+        new Station("Pixel Vibes", "https://alxq.org:8000/undrgnd")
     ]),
     
     new Genre("Lofi", [
-        new Station("AStream", "http://astream.cf:9000/astream"),
-        new Station("Label CANTROLL [HDR]", "http://harddanceradio.ddns.is74.ru:8000/labelcantroll"),
-        new Station("24/7 Lofi Radio", "http://ec3.yesstreaming.net:3750/stream"),
-        new Station("lofi420.com", "http://ec2.yesstreaming.net:4260/stream"),
-        new Station("Yes", "http://ec6.yesstreaming.net:2240/stream")
+        new Station("AStream", "https://astream.cf:9000/astream"),
+        new Station("Label CANTROLL [HDR]", "https://harddanceradio.ddns.is74.ru:8000/labelcantroll"),
+        new Station("24/7 Lofi Radio", "https://ec3.yesstreaming.net:3750/stream"),
+        new Station("lofi420.com", "https://ec2.yesstreaming.net:4260/stream"),
+        new Station("Yes", "https://ec6.yesstreaming.net:2240/stream")
     ]),
     
     new Genre("Fantasy", [
