@@ -121,6 +121,10 @@ class CustomWindow extends HTMLElement {
             mouseY = e.clientY;
             document.onmouseup = closeDragElement;
             document.onmousemove = elementDrag;
+            for (let i = 0; i < document.querySelectorAll(".window").length; i++) {
+                document.querySelectorAll(".window")[i].style.zIndex = 0;
+            }
+            element.style.zIndex = 1;
         }
 
         function elementDrag(e) {
