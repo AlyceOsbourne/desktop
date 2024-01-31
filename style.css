@@ -37,12 +37,26 @@ body {
         grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
         grid-template-rows: repeat(auto-fill, minmax(60px, 1fr));
         grid-gap: 10px;
-        .icon {
-            border-radius: 30%;
-            width: 50px;
-            aspect-ratio: 1/1;
-            outline: 1px solid var(--accent-colour);
-            outline-offset: 4px;
+        align-items: center;
+        justify-items: center;
+        .icon-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .icon {
+                border-radius: 30%;
+                width: 50px;
+                aspect-ratio: 1/1;
+                outline: 1px solid var(--accent-colour);
+                outline-offset: 4px;
+                margin: 5px;
+            }
+            .text {
+                font-size: 0.8rem;
+                color: var(--accent-colour);
+                font-weight: bold;
+            }
         }
     }
 
@@ -247,6 +261,7 @@ body {
             align-items: center;
             justify-items: center;
             padding: min(5px, 1vh) min(10px, 2vh);
+            background-color: var(--base-colour);
             .title-text {
                 color: var(--accent-colour);
                 font-size: 1.2rem;
@@ -284,4 +299,3 @@ body {
         }
     }
 }
-

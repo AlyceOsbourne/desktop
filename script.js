@@ -174,16 +174,23 @@ document.addEventListener("DOMContentLoaded", function () {
     
     const desktop = document.querySelector(".desktop");
     apps.forEach((app) => {
+        const iconContainer = document.createElement("div");
+        iconContainer.classList.add("icon-container");
         const icon = document.createElement("img");
         icon.src = app.icon;
         icon.classList.add("icon");
-        icon.addEventListener("click", () => {
+        const title = document.createElement("div");
+        title.innerHTML = app.title;
+        title.classList.add("title");
+        iconContainer.appendChild(icon);
+        iconContainer.appendChild(title);
+        iconContainer.addEventListener("click", () => {
             const window = new CustomWindow(app.title, app.src);
             desktop.appendChild(window);
         });
-        desktop.querySelector(".grid").appendChild(icon);
+        desktop.querySelector(".grid").appendChild(iconContainer);
     });
-        
+
     const startButton = document.querySelector('.start-button');
     const menu = document.querySelector('.menu');
 
