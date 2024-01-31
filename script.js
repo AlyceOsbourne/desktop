@@ -121,8 +121,8 @@ class CustomWindow extends HTMLElement {
             mouseY = e.clientY;
             document.onmouseup = closeDragElement;
             document.onmousemove = elementDrag;
-            for (let i = 0; i < document.querySelectorAll(".window").length; i++) {
-                document.querySelectorAll(".window")[i].style.zIndex = 0;
+            for (const element of document.querySelectorAll(".window")) {
+                element.style.zIndex = 0;
             }
             element.style.zIndex = 1;
         }
@@ -201,4 +201,12 @@ document.addEventListener("DOMContentLoaded", function () {
     startButton.addEventListener('click', function() {
         menu.classList.toggle('expanded');
     });
+    
+    function closeMenu(e) {
+        if (!menu.contains(e.target) && !startButton.contains(e.target)) {
+            menu.classList.remove('expanded');
+        }
+    }
+    
+    document.addEventListener('click', closeMenu);
 });
