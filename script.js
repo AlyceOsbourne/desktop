@@ -16,9 +16,6 @@ function Station(title, src) {
 }
 
 const apps = [
-    new Application("DevDocs", "https://devdocs.io/favicon.ico", "https://www.devdocs.io/"),
-    new Application("Read The Docs", "https://docs.readthedocs.io/favicon.ico", "https://docs.readthedocs.io/en/stable/"),
-    new Application("W3Schools", "https://www.w3schools.com/favicon.ico", "https://www.w3schools.com/"),
     new Application("Mousetrap", "https://raw.githubusercontent.com/AlyceOsbourne/cast/main/src/favicon.ico", "https://alyceosbourne.github.io/cast/"),
     new Application("Repl", "https://raw.githubusercontent.com/AlyceOsbourne/repl/main/repl/favicon.ico", "https://alyceosbourne.github.io/repl/"),
 ];
@@ -159,9 +156,18 @@ document.addEventListener("DOMContentLoaded", function () {
         stationSelect.appendChild(optGroup);
     });
     
+    stationSelect.selectedIndex = 0;
+    const audio = document.querySelector("audio");
+    audio.src = stationSelect.value;
+    
     stationSelect.addEventListener("change", (e) => {
         const audio = document.querySelector("audio");
         audio.src = e.target.value;
+        if (!audio.paused) {
+            audio.play();
+            document.querySelector(".play-pause").classList.remove("fa-play");
+            document.querySelector(".play-pause").classList.add("fa-pause");
+        };
     });
     
     const desktop = document.querySelector(".desktop");

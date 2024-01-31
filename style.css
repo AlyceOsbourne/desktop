@@ -97,6 +97,55 @@ body {
             .icon {
                 border: 1px solid var(--accent-colour);
             }
+            #station {
+                appearance: none;
+                -webkit-appearance: none;
+                width: 8em;
+                height: 1.5em;
+                border-radius: 5px;
+                padding: 0 5px;
+                background-color: var(--base-colour);
+                color: var(--accent-colour);
+                border: 1px solid var(--accent-colour);
+                transition: background-color 0.2s ease-out, color 0.2s ease-in, width 0.2s ease-in;
+                &:hover,
+                &:focus {
+                    background-color: var(--accent-colour);
+                    color: var(--base-colour);
+                    font-weight: bold;
+                    width: 18em;
+                }
+                
+                option {
+                    background-color: var(--base-colour);
+                    color: var(--accent-colour);
+                }
+                
+                option:hover,
+                option:focus {
+                    background-color: var(--accent-colour);
+                    color: var(--base-colour);
+                    font-weight: bold;
+                }
+                
+                option:checked {
+                    background-color: var(--accent-colour);
+                    color: var(--base-colour);
+                    font-weight: bold;
+                }
+                
+                option:checked:hover,
+                option:checked:focus {
+                    background-color: var(--base-colour);
+                    color: var(--accent-colour);
+                    font-weight: bold;
+                }
+                
+                optgroup {
+                    background-color: var(--base-colour);
+                    color: var(--accent-colour);
+                }
+            }
 
             .radio {
                 display: flex;
@@ -110,7 +159,7 @@ body {
                     width: 0;
                     height: 0;
                 }
-
+                
                 .play_pause {
                     display: flex;
                     justify-content: center;
@@ -215,3 +264,4 @@ body {
         }
     }
 }
+
