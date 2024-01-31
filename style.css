@@ -232,7 +232,7 @@ body {
     }
 
     .window {
-        border-radius: 30px;
+        border-radius: 15px;
         resize: both;
         overflow: auto;
         position: absolute;
@@ -299,4 +299,12 @@ body {
             }
         }
     }
+}
+
+.screensaver {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
 }
