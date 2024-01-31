@@ -19,7 +19,8 @@ const apps = [
     new Application("DevDocs", "https://devdocs.io/favicon.ico", "https://www.devdocs.io/"),
     new Application("Read The Docs", "https://docs.readthedocs.io/favicon.ico", "https://docs.readthedocs.io/en/stable/"),
     new Application("W3Schools", "https://www.w3schools.com/favicon.ico", "https://www.w3schools.com/"),
-    new Application("Mousetrap", "https://alyceosbourne.github.io/favicon.ico", "https://alyceosbourne.github.io/cast/"),
+    new Application("Mousetrap", "https://raw.githubusercontent.com/AlyceOsbourne/cast/main/src/favicon.ico", "https://alyceosbourne.github.io/cast/"),
+    new Application("Repl", "https://raw.githubusercontent.com/AlyceOsbourne/repl/main/repl/favicon.ico", "https://alyceosbourne.github.io/repl/"),
 ];
             
 const genres = [
