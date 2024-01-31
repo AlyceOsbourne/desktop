@@ -18,6 +18,8 @@ function Station(title, src) {
 const apps = [
     new Application("DevDocs", "https://devdocs.io/favicon.ico", "https://www.devdocs.io/"),
     new Application("Read The Docs", "https://docs.readthedocs.io/favicon.ico", "https://docs.readthedocs.io/en/stable/"),
+    new Application("W3Schools", "https://www.w3schools.com/favicon.ico", "https://www.w3schools.com/"),
+    new Application("Mousetrap", "https://alyceosbourne.github.io/favicon.ico", "https://alyceosbourne.github.io/cast/"),
 ];
             
 const genres = [
@@ -94,12 +96,11 @@ class CustomWindow extends HTMLElement {
         content.style.width = "100%";
         content.style.height = "100%";
         content.style.border = "none";
+        src = src.replace("http://", "https://");
         content.src = src;
-
         titleBar.append(titleText, document.createElement("div"), buttonContainer);
         window.append(titleBar, content);
         this.appendChild(window);
-
         this.makeDraggable(window, titleBar);
     }
 
